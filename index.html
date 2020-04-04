@@ -4,7 +4,8 @@
 <head>
   <title>Critical Index</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -49,6 +50,57 @@
       <form id="sign-out" class="border">
         <input type="submit" value="Sign Out">
       </form>
+
+      <form id="create-character" class="border">
+        <fieldset>
+          <legend>Create Character!</legend>
+          <input type="text" name="character[char_name]" placeholder="Name">
+          <input type="text" name="character[char_class]" placeholder="Class">
+          <input type="text" name="character[char_level]" placeholder="Level">
+          <input type="text" name="character[char_race]" placeholder="Race">
+          <input type="text" name="character[char_alignment]" placeholder="Alignment">
+          <input type="text" name="character[char_deity]" placeholder="Deity">
+          <input type="text" name="character[char_gender]" placeholder="Gender">
+          <input type="text" name="character[char_xp]" placeholder="XP">
+          <input type="text" name="character[char_campaign]" placeholder="Campaign">
+          <input type="text" name="character[char_languages]" placeholder="Languages">
+          <input type="submit" value="Create Your Character!">
+        </fieldset>
+      </form>
+
+      <form id="update-character" class="border">
+        <fieldset>
+          <legend>Update Character!</legend>
+          <input type="text" name="character[id]" placeholder="Character ID">
+          <input type="text" name="character[char_name]" placeholder="Name">
+          <input type="text" name="character[char_alignment]" placeholder="Alignment">
+          <input type="text" name="character[char_deity]" placeholder="Deity">
+          <input type="text" name="character[char_gender]" placeholder="Gender">
+          <input type="text" name="character[char_languages]" placeholder="Languages">
+          <input type="submit" value="Update Your Character!">
+        </fieldset>
+      </form>
+
+      <form id="delete-character" class="border">
+        <fieldset>
+          <legend>Delete Character!</legend>
+          <input type="text" name="character[id]" placeholder="Character ID">
+          <input type="submit" value="Delete Your Character!">
+        </fieldset>
+      </form>
+
+      <form id="show-all" class="border">
+        <input type="submit" value="Show All Characters">
+      </form>
+
+      <form id="single-character" class="border">
+        <fieldset>
+          <legend>Show One Character!</legend>
+          <input type="text" name="character[id]" placeholder="Name">
+          <input type="submit" value="Show One Character!">
+        </fieldset>
+      </form>
+
 </body>
 
 </html>
