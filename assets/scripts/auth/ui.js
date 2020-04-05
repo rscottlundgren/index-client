@@ -2,6 +2,15 @@
 
 const store = require('../store')
 
+const onDropDownRegistration = function (event) {
+  $('#su-sect').removeClass('hide')
+  $('#si-sect').addClass('hide')
+}
+const onDropDownSignIn = function (event) {
+  $('#si-sect').removeClass('hide')
+  $('#su-sect').addClass('hide')
+}
+
 // Sign-Up User Interface
 const signUpSuccess = function (data) {
   $('#console-line-one').text('Registration Successful.')
@@ -129,6 +138,8 @@ const signOutFailure = function (error) {
 }
 
 module.exports = {
+  onDropDownRegistration,
+  onDropDownSignIn,
   signUpSuccess,
   signUpFailure,
   signInSuccess,
