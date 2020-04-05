@@ -6,8 +6,16 @@ const store = require('../store')
 const createCharacterSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Creation Successful.')
   console.log(responseFromAPI)
-  // $('#sign-up').trigger('reset')
-  // $('#sign-up').addClass('hide')
+  $('#char-name-new-gen').text(responseFromAPI.character.char_name)
+  $('#char-class-new-gen').text(responseFromAPI.character.char_class)
+  $('#char-level-new-gen').text(responseFromAPI.character.char_level)
+  $('#char-race-new-gen').text(responseFromAPI.character.char_race)
+  $('#char-align-new-gen').text(responseFromAPI.character.char_alignment)
+  $('#char-deity-new-gen').text(responseFromAPI.character.char_deity)
+  $('#char-gender-new-gen').text(responseFromAPI.character.char_gender)
+  $('#char-xp-new-gen').text(responseFromAPI.character.char_xp)
+  $('#char-campaign-new-gen').text(responseFromAPI.character.char_campaign)
+  $('#char-languages-new-gen').text(responseFromAPI.character.char_languages)
 }
 const createCharacterFailure = function (error) {
   $('#console-line-one').text('Creation unsuccessful.')
