@@ -5,17 +5,19 @@ const store = require('../store')
 const onDropDownRegistration = function (event) {
   $('#su-sect').removeClass('hide')
   $('#si-sect').addClass('hide')
+  $('#sign-up').trigger('reset')
 }
 const onDropDownSignIn = function (event) {
   $('#si-sect').removeClass('hide')
   $('#su-sect').addClass('hide')
+  $('#sign-in').trigger('reset')
 }
 
 // Sign-Up User Interface
 const signUpSuccess = function (data) {
   $('#console-line-one').text('Registration Successful.')
-  // $('#sign-up').trigger('reset')
-  // $('#sign-up').addClass('hide')
+  $('#su-sect').trigger('reset')
+  $('#su-sect').addClass('hide')
 }
 const signUpFailure = function (error) {
   $('#console-line-one').text('Registration unsuccessful. Confirm matching credentials.')
@@ -25,110 +27,54 @@ const signUpFailure = function (error) {
 // Sign-In User Interface
 const signInSuccess = function (data) {
   $('#console-line-one').text('Authentication Successful. Welcome, Professor.')
-  // $('#sign-in').trigger('reset')
-  // $('#sign-in').addClass('hide')
-  // $('#game-stats').removeClass('hide')
-  // $('#create-game').removeClass('hide')
-  // $('#sign-out').removeClass('hide')
-  // $('#gameboard').removeClass('hide')
-  // $('#delta-form').removeClass('hide')
-  // $('#delta-old').addClass('hide')
-  // $('#delta-new').addClass('hide')
-  // $('#delta-submit-facade').removeClass('hide')
-  // $('#open-register-form').addClass('hide')
-  // $('#open-authenticate-form').addClass('hide')
+  $('#si-sect').addClass('hide')
+  $('#si-mstr').addClass('hide')
+  $('#reg-mstr').addClass('hide')
+  $('#blurb-form-row').addClass('hide')
+  $('#bg-mstr').addClass('bg-002')
+  $('#bg-mstr').removeClass('bg-000')
+  $('#tour').addClass('hide')
+  $('#delta-pw-mstr').removeClass('hide')
+  $('#so-mstr').removeClass('hide')
+  $('#char-mstr').removeClass('hide')
   store.user = data.user
 }
 const signInFailure = function (error) {
   $('#console-line-one').text('Authentication unsuccessful. Please try again.')
-  $('#sign-in').trigger('reset')
+  $('#si-sect').trigger('reset')
 }
 
 // Change Password User Interface
+const onChangePasswordReveal = function (event) {
+  $('#delta-pw-form').removeClass('hide')
+  $('#delta-pw').addClass('hide')
+}
 const changePasswordSuccess = function (data) {
   $('#console-line-one').text('Credential successfully updated.')
-  // $('#console-line-two').text('')
-  // $('#delta-submit-final').addClass('hide')
-  // $('#delta-submit-facade').removeClass('hide')
-  // $('#delta-old').addClass('hide')
-  // $('#delta-old').val('')
-  // $('#delta-new').addClass('hide')
-  // $('#delta-new').val('')
-  // $('#game-stats').removeClass('hide')
-  // $('#create-game').removeClass('hide')
-  // $('#sign-out').removeClass('hide')
+  $('#old-pw').val('')
+  $('#new-pw').val('')
+  $('#delta-pw-form').addClass('hide')
+  $('#delta-pw').removeClass('hide')
 }
 const changePasswordFailure = function (error) {
   $('#console-line-one').text('Credential update unsuccessful. Please try again.')
-  // $('#console-line-two').text('')
-  // $('#delta-old').val('')
-  // $('#delta-new').val('')
+  $('#old-pw').val('')
+  $('#new-pw').val('')
 }
 
 // Sign-Out User Interface
 const signOutSuccess = function (data) {
   $('#console-line-one').text('--- Connection terminated. ---')
-  // $('#console-line-two').text('')
-  // $('#auth-successful').addClass('hide')
-  // $('#auth-unsuccessful').addClass('hide')
-  // $('#choose-opponent').addClass('hide')
-  // $('#player-move').addClass('hide')
-  // $('#O-to-0').addClass('hide')
-  // $('#O-to-1').addClass('hide')
-  // $('#O-to-2').addClass('hide')
-  // $('#O-to-3').addClass('hide')
-  // $('#O-to-4').addClass('hide')
-  // $('#O-to-5').addClass('hide')
-  // $('#O-to-6').addClass('hide')
-  // $('#O-to-7').addClass('hide')
-  // $('#O-to-8').addClass('hide')
-  // $('#X-to-0').addClass('hide')
-  // $('#X-to-1').addClass('hide')
-  // $('#X-to-2').addClass('hide')
-  // $('#X-to-3').addClass('hide')
-  // $('#X-to-4').addClass('hide')
-  // $('#X-to-5').addClass('hide')
-  // $('#X-to-6').addClass('hide')
-  // $('#X-to-7').addClass('hide')
-  // $('#X-to-8').addClass('hide')
-  // $('#invalid-move-gp').addClass('hide')
-  // $('#you-won').addClass('hide')
-  // $('#you-lost').addClass('hide')
-  // $('#stalemate').addClass('hide')
-  // $('#invalid-move-go').addClass('hide')
-  // $('#play-game-yes').addClass('hide')
-  // $('#open-register-form').addClass('hide')
-  // $('#play-game-no').addClass('hide')
-  // $('#open-authenticate-form').addClass('hide')
-  // $('#unique-pw-q').addClass('hide')
-  // $('#unique-pw-r').addClass('hide')
-  // $('#auth-update-successful').addClass('hide')
-  // $('#play-again').addClass('hide')
-  // $('#delta-submit-y').addClass('hide')
-  // $('#delta-submit-n').addClass('hide')
-  // $('#play-again-y').addClass('hide')
-  // $('#play-again-n').addClass('hide')
-  // $('#sign-up').addClass('hide')
-  // $('#sign-in').addClass('hide')
-  // $('#game-stats').addClass('hide')
-  // $('#delta-form').addClass('hide')
-  // $('#delta-old').addClass('hide')
-  // $('#delta-new').addClass('hide')
-  // $('#delta-submit-facade').addClass('hide')
-  // $('#delta-submit-check').addClass('hide')
-  // $('#delta-submit-final').addClass('hide')
-  // $('#create-game').addClass('hide')
-  // $('#sign-out').addClass('hide')
-  // $('#gameboard').addClass('hide')
-  // $('#0').addClass('hide')
-  // $('#1').addClass('hide')
-  // $('#2').addClass('hide')
-  // $('#3').addClass('hide')
-  // $('#4').addClass('hide')
-  // $('#5').addClass('hide')
-  // $('#6').addClass('hide')
-  // $('#7').addClass('hide')
-  // $('#8').addClass('hide')
+  $('#si-mstr').removeClass('hide')
+  $('#reg-mstr').removeClass('hide')
+  $('#blurb-form-row').removeClass('hide')
+  $('#bg-mstr').removeClass('bg-002')
+  $('#bg-mstr').addClass('bg-000')
+  $('#tour').removeClass('hide')
+  $('#delta-pw-mstr').addClass('hide')
+  $('#delta-pw-form').addClass('hide')
+  $('#so-mstr').addClass('hide')
+  $('#char-mstr').addClass('hide')
   // setTimeout(function () {
   //   window.location.replace("https://www.linkedin.com/in/rscottlundgren/")
   // }, 2250)
@@ -144,6 +90,7 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
+  onChangePasswordReveal,
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
