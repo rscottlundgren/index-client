@@ -1,1 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+
+body,
+html {
+  color: white;
+  height: 100%;
+}
+
+.bg-000 {
+  background-image: url('/public/img/background_000.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+hr {
+  border-top: 1px dashed white;
+}
+
+.hide {
+  display: none;
+}
