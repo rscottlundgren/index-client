@@ -12,33 +12,119 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/559761ace5.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <h1>Critical Index</h1>
-  <p id="console-line-one">
-    <p>
+<body class="bg-000">
 
-      <form id="sign-up" class="border">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
-          <input type="submit" value="Sign up!">
-        </fieldset>
-      </form>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <a class="navbar-brand text-white">Critical <span><i class="fas fa-scroll"></i> Index</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <span>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Take A Tour!</a>
+          </li>
+          <li class="nav-item">
+            <button id="reg-dd" class="navbar-button btn btn-outline-light mx-2">Register</button>
+          </li>
+          <li class="nav-item">
+            <button id="si-dd" class="navbar-button btn btn-outline-light mx-2">Sign-In</button>
+          </li>
+        </ul>
+      </span>
+    </div>
+  </nav>
 
-      <form id="sign-in" class="border">
-        <fieldset>
-          <legend>Sign in!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" value="Sign in!">
-        </fieldset>
-      </form>
+  <main>
+    <p id="console-line-one">
+      <p>
+        <div class="row">
+          <article class="col-sm-8">
+            <h1>Everything you need to fire Magic Missile at the darkness -
+              right at your fingertips...</h1>
+            <br>
+            <h6>It's hard to be a Dungeon Master nowadays - there's so much to
+              keep track of. Initiative rolls, who failed their "Will" save,
+              who's stabbing whom with what under the cover of darkness...and
+              why, DEAR GOD WHY, won't your players just follow the nicely laid
+              adventure that you spent weeks preparing for and now you're in a
+              rush to come up with an alternative adventure from the shreds that
+              they left you all because they thought they saw something shiny
+              and now you have to look like everything's under control and you
+              planned this all along... *breathe*</h6>
+            <br>
+            <h6>It's not just hard for the DM though - it's hard for the
+              PC's too. There's this incredible world that you've been
+              introduced to with Gods and monsters and more things to kill
+              than you could shake a stick at. There's damsels to save, gold to
+              amass, wrongs to make right (or make worse if you're Chaotic Evil) -
+              there are all of the things to do! With all that going on, it can
+              be hard to stay "in the zone" and in character when you're adding
+              up your damage, trying to visualize a dungeon, figuring out who
+              you're attacking, and oh, fudge, did the Cleric REALLY just run
+              out of cure spells? Your tank is DYING OVER HERE! HELLO?!?!...
+              (and all of the other things that help you get those
+              beloved experience points at the end of a campaign.)</h6>
+            <br>
+            <h2>Critical Index is here to change all of that...</h2>
+            <br>
+            <h3>Let us show you how...</h3>
+          </article>
 
-      <form id="change-password" class="border">
+
+          <section id="su-sect" class="col-sm-4 hide">
+            <form id="sign-up" class="card bg-transparent">
+              <div class="container card-body align-center">
+                <h3 class="text-center"><i class="far fa-user"></i> Register:</h3>
+                <hr>
+                <div class="form-group row">
+                  <label for="su-@" class="col-sm-2 col-form-label text-center"><i class="far fa-user-circle fa-2x"></i></label>
+                  <div class="col-sm-10">
+                    <input id="su-@" class="form-control" type="email" name="credentials[email]" placeholder="handle@domain.com">
+                  </div>
+                  <label for="su-pw1" class="col-sm-2 col-form-label text-center"><i class="fas fa-lock fa-2x"></i></label>
+                  <div class="col-sm-10">
+                    <input id="su-pw1" class="form-control" type="password" name="credentials[password]" placeholder="Password">
+                  </div>
+                  <label for="su-pw2" class="col-sm-2 col-form-label text-center"><i class="fas fa-lock fa-2x"></i></label>
+                  <div class="col-sm-10">
+                    <input id="su-pw2" class="form-control" type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
+                  </div>
+                  <input type="submit" value="Sign up!" class="col-sm-4 offset-sm-4">
+                </div>
+              </div>
+            </form>
+          </section>
+
+
+        <section id="si-sect" class="col-4 hide">
+          <form id="sign-in" class="card bg-transparent">
+            <div class="container card-body align-center">
+              <h3 class="text-center"><i class="far fa-user"></i> Sign-In:</h3>
+              <hr>
+              <div class="form-group row">
+                <label for="si-@" class="col-sm-2 col-form-label text-center"><i class="far fa-user-circle fa-2x"></i></label>
+                <div class="col-sm-10">
+                  <input id="si-@" class="form-control" type="email" name="credentials[email]" placeholder="handle@domain.com">
+                </div>
+                <label for="si-pw" class="col-sm-2 col-form-label text-center"><i class="fas fa-lock fa-2x"></i></label>
+                <div class="col-sm-10">
+                  <input id="si-pw" class="form-control" type="password" name="credentials[password]" placeholder="Password">
+                </div>
+                <input type="submit" value="Sign in!" class="col-sm-4 offset-sm-4">
+              </div>
+          </form>
+        </section>
+      </div>
+
+
+
+        <!-- <form id="change-password" class="border">
         <fieldset>
           <legend>Change Password!</legend>
           <input type="password" name="passwords[old]" placeholder="Old Password">
@@ -99,8 +185,8 @@
           <input type="text" name="character[id]" placeholder="Name">
           <input type="submit" value="Show One Character!">
         </fieldset>
-      </form>
-
+      </form> -->
+  </main>
 </body>
 
 </html>
