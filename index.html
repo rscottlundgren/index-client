@@ -53,6 +53,18 @@
             <button id="si-dd" class="navbar-button btn btn-outline-light mx-2">Sign-In</button>
           </li>
 
+          <li id="show-one-mstr" class="nav-item hide">
+            <button id="show-one" class="navbar-button btn btn-outline-light mx-2">Show One</button>
+          </li>
+
+          <!-- ACTIVE: Show One Button: --------------------------------------->
+          <!-- Opens Show One Character Inline Form --------------------------->
+          <form id="show-one-form" class="form-inline hide">
+            <label class="sr-only" for="show-one-char-id">Character ID</label>
+            <input id="show-one-char-id" class="form-control mx-2" type="text" name="character[id]" placeholder="Character ID">
+            <button type="submit" class="navbar-button btn btn-outline-light mx-2">Show One</button>
+          </form>
+
           <!-- ACTIVE: Show-All Button: Displays All User Characters In ------->
           <!-- Accordion File Display ----------------------------------------->
           <li id="show-all-mstr" class="nav-item hide">
@@ -78,6 +90,8 @@
           <li id="so-mstr" class="nav-item hide">
             <button id="sign-out" class="navbar-button btn btn-outline-light mx-2" type="submit">Sign Out</button>
           </li>
+
+          <!-- NAVIGATION BAR: Closing Tags ------------------------------------->
         </ul>
       </span>
     </div>
@@ -353,14 +367,6 @@
           <legend>Delete Character!</legend>
           <input type="text" name="character[id]" placeholder="Character ID">
           <input type="submit" value="Delete Your Character!">
-        </fieldset>
-      </form> -->
-
-      <!-- <form id="single-character" class="border">
-        <fieldset>
-          <legend>Show One Character!</legend>
-          <input type="text" name="character[id]" placeholder="Name">
-          <input type="submit" value="Show One Character!">
         </fieldset>
       </form> -->
     </section>
