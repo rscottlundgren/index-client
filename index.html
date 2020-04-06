@@ -53,6 +53,12 @@
             <button id="si-dd" class="navbar-button btn btn-outline-light mx-2">Sign-In</button>
           </li>
 
+          <!-- ACTIVE: Show-All Button: Displays All User Characters In ------->
+          <!-- Accordion File Display ----------------------------------------->
+          <li id="show-all-mstr" class="nav-item hide">
+            <button id="show-all" class="navbar-button btn btn-outline-light mx-2">Show All</button>
+          </li>
+
           <!-- ACTIVE: Change Password Button: -------------------------------->
           <!-- Opens Change Password Inline Form ------------------------------>
           <li id="delta-pw-mstr" class="nav-item hide">
@@ -165,13 +171,13 @@
               </div>
             </div>
           </div>
-        </div>
-      </form>
+    </div>
+    </form>
     </section>
     </div>
     <section id="char-mstr" class="row justify-content-space-evenly hide">
       <div class="col-sm-4 mx-6">
-        <section id="char-create-form" class="my-3" style="background-color: #000000AA;">
+        <section id="char-create-form" class="my-3" style="background-color: #000000CC;">
           <form id="create-character" class="card bg-transparent">
             <div class="container card-body align-center">
               <h3 class="text-center"><i class="fas fa-dice-d6"></i> Character Generator:</h3>
@@ -245,7 +251,7 @@
         </section>
       </div>
       <div class="col-sm-4 mx-6">
-        <section id="char-new-gen" class="my-3" style="background-color: #000000AA;">
+        <section id="char-new-gen" class="my-3" style="background-color: #000000CC;">
           <form class="card bg-transparent">
             <div class="container card-body align-center">
               <h3 class="text-center"><i class="fas fa-dice-d6"></i> PC Generated:</h3>
@@ -315,16 +321,16 @@
         </section>
       </div>
       <div class="col-sm-4 mx-6">
-        <section class="my-3" style="background-color: #000000AA;">
+        <section class="my-3" style="background-color: #000000CC;">
           <form class="card bg-transparent">
             <div class="container card-body align-center">
               <h3 class="text-center"><i class="fas fa-dice-d6"></i> Character Index:</h3>
+              <hr>
             </div>
-            <hr>
+            <div class="accordion" id="char-list-accord">
+              <!-- "Show All Characters" & "Show One Character" Cards Here ------>
+            </div>
           </form>
-          <div class="accordion" id="char-list-accord">
-            <!-- "Show All Characters" & "Show One Character" Cards Here ------>
-          </div>
         </section>
       </div>
 
@@ -349,10 +355,6 @@
           <input type="submit" value="Delete Your Character!">
         </fieldset>
       </form> -->
-
-      <form id="show-all" class="border">
-        <input type="submit" value="Show All Characters">
-      </form>
 
       <!-- <form id="single-character" class="border">
         <fieldset>
