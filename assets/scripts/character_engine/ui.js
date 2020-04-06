@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const showAllCharactersTemplate = require('../templates/accordion-character.handlebars')
 
 // Sign-Up User Interface
 const createCharacterSuccess = function (responseFromAPI) {
@@ -49,8 +50,10 @@ const deleteCharacterFailure = function (error) {
 const showAllCharactersSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Show All Successful.')
   console.log(responseFromAPI)
-  // $('#sign-up').trigger('reset')
-  // $('#sign-up').addClass('hide')
+  const characterList = responseFromAPI.characters
+  const showCharacterHTML = showAllCharactersTemplate({characters: characterList})
+  $('#char-list-accord').empty()
+  $('#char-list-accord').append(showCharacterHTML)
 }
 const showAllCharactersFailure = function (error) {
   $('#console-line-one').text('Show All unsuccessful.')
