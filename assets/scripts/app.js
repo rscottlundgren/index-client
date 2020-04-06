@@ -18,7 +18,7 @@ $(() => {
   $('#create-character').on('submit', charEvents.onCreateCharacter)
   $('#update-character').on('submit', charEvents.onUpdateCharacter)
   $('#delete-character').on('submit', charEvents.onDeleteCharacter)
-  $('#show-all').on('submit', charEvents.onShowAll)
+  $('#show-all').on('click', charEvents.onShowAll)
   $('#single-character').on('submit', charEvents.onShowOne)
   $('#reg-dd').on('click', authUI.onDropDownRegistration)
   $('#si-dd').on('click', authUI.onDropDownSignIn)
