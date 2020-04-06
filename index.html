@@ -17,39 +17,49 @@
 </head>
 
 <body id="bg-mstr" class="bg-000">
-  <!-- NAVIGATION BAR ----------------------------------------------------------->
+
+  <!-- NAVIGATION BAR --------------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000">
+
     <!-- Brand Logo in the Navigation Bar ------------------------------------->
     <a class="navbar-brand text-white">Critical <span><i class="fas fa-scroll"></i></span> Index</a>
     <a id="console-line-one" class="navbar-text text-yellow"></a>
+
     <!-- Button will appear when Navbar senses the screen has shrunk ---------->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <!-- All links moved to the opposite side of the brand -------------------->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+
       <!-- Span wrapper to move everything to the opposite side of the brand -->
       <span>
         <ul class="navbar-nav">
+
           <!-- DISABLED: Link directing user to a video tour of the service --->
           <li id="tour" class="nav-item">
             <a class="nav-link disabled" href="#">Take A Tour!</a>
           </li>
+
           <!-- ACTIVE: Registration/Sign-Up Button: --------------------------->
           <!-- Opens Registration Drop Down Menu ------------------------------>
           <li id="reg-mstr" class="nav-item">
             <button id="reg-dd" class="navbar-button btn btn-outline-light mx-2">Register</button>
           </li>
+
           <!-- ACTIVE: Sign-In Button: Opens Sign-In Drop Down Menu ----------->
           <li id="si-mstr" class="nav-item">
             <button id="si-dd" class="navbar-button btn btn-outline-light mx-2">Sign-In</button>
           </li>
+
           <!-- ACTIVE: Change Password Button: -------------------------------->
           <!-- Opens Change Password Inline Form ------------------------------>
           <li id="delta-pw-mstr" class="nav-item hide">
             <button id="delta-pw" class="navbar-button btn btn-outline-light mx-2">Change Password</button>
           </li>
-          <!-- ACTIVE: Change Password Form -->
+
+          <!-- ACTIVE: Change Password Form ----------------------------------->
           <form id="delta-pw-form" class="form-inline hide">
             <label class="sr-only" for="old-pw">Old Password</label>
             <input id="old-pw" class="form-control mx-2" type="password" name="passwords[old]" placeholder="Old Password">
@@ -57,6 +67,8 @@
             <input id="new-pw" class="form-control mx-2" type="password" name="passwords[new]" placeholder="New Password">
             <button class="btn btn-outline-light ml-2" type="submit">Change Password</button>
           </form>
+
+          <!-- ACTIVE: Sign Out Button ---------------------------------------->
           <li id="so-mstr" class="nav-item hide">
             <button id="sign-out" class="navbar-button btn btn-outline-light mx-2" type="submit">Sign Out</button>
           </li>
@@ -107,15 +119,24 @@
               <div class="col-sm-10">
                 <input id="su-@" class="form-control" type="email" name="credentials[email]" placeholder="handle@domain.com">
               </div>
+            </div>
+            <div class="form-group row">
               <label for="su-pw1" class="col-sm-2 col-form-label text-center"><i class="fas fa-lock fa-2x"></i></label>
               <div class="col-sm-10">
                 <input id="su-pw1" class="form-control" type="password" name="credentials[password]" placeholder="Password">
               </div>
+            </div>
+            <div class="form-group row">
               <label for="su-pw2" class="col-sm-2 col-form-label text-center"><i class="fas fa-lock fa-2x"></i></label>
               <div class="col-sm-10">
                 <input id="su-pw2" class="form-control" type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
               </div>
-              <input type="submit" value="Sign up!" class="col-sm-4 offset-sm-4">
+            </div>
+              <div class="form-group row">
+                <div class="col-sm-12 text-center">
+                  <button type="submit" class="btn btn-outline-light ml-2">Register</button>
+                </div>
+              </div>
             </div>
           </div>
         </form>
@@ -131,18 +152,25 @@
               <div class="col-sm-10">
                 <input id="si-@" class="form-control" type="email" name="credentials[email]" placeholder="handle@domain.com">
               </div>
+            </div>
+            <div class="form-group row">
               <label for="si-pw" class="col-sm-2 col-form-label text-center"><i class="fas fa-lock fa-2x"></i></label>
               <div class="col-sm-10">
                 <input id="si-pw" class="form-control" type="password" name="credentials[password]" placeholder="Password">
               </div>
-              <input type="submit" value="Sign in!" class="col-sm-4 offset-sm-4">
             </div>
+            <div class="form-group row">
+              <div class="col-sm-12 text-center">
+                <button type="submit" class="btn btn-outline-light ml-2">Sign In</button>
+              </div>
+            </div>
+          </div>
         </form>
       </section>
     </div>
     <section id="char-mstr" class="row justify-content-space-evenly hide">
       <div class="col-sm-4 mx-6">
-        <section id="char-create-form" class="my-3" style="background-color: #00000080;">
+        <section id="char-create-form" class="my-3" style="background-color: #000000AA;">
           <form id="create-character" class="card bg-transparent">
             <div class="container card-body align-center">
               <h3 class="text-center"><i class="fas fa-dice-d6"></i> Character Generator:</h3>
@@ -216,7 +244,7 @@
         </section>
       </div>
       <div class="col-sm-4 mx-6">
-        <section id="char-new-gen" class="my-3" style="background-color: #00000080;">
+        <section id="char-new-gen" class="my-3" style="background-color: #000000AA;">
           <form class="card bg-transparent">
             <div class="container card-body align-center">
               <h3 class="text-center"><i class="fas fa-dice-d6"></i> PC Generated:</h3>
@@ -286,62 +314,15 @@
         </section>
       </div>
       <div class="col-sm-4 mx-6">
-        <section class="my-3" style="background-color: #00000080;">
+        <section class="my-3" style="background-color: #000000AA;">
           <form class="card bg-transparent">
             <div class="container card-body align-center">
               <h3 class="text-center"><i class="fas fa-dice-d6"></i> Character Index:</h3>
             </div>
-          <hr>
+            <hr>
           </form>
           <div class="accordion" id="char-list-accord">
-            <!-- <div class="card bg-transparent">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button class="btn btn-link bg-transparent" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Collapsible Group Item #1
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="card bg-transparent">
-              <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed bg-transparent" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Collapsible Group Item #2
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="card bg-transparent">
-              <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed bg-transparent" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Collapsible Group Item #3
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div> -->
+            <!-- "Show All Characters" & "Show One Character" Cards Here ------>
           </div>
         </section>
       </div>
