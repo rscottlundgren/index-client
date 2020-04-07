@@ -38,6 +38,7 @@ const signInSuccess = function (data) {
   $('#so-mstr').removeClass('hide')
   $('#char-mstr').removeClass('hide')
   $('#show-all-mstr').removeClass('hide')
+  $('#show-one-mstr').removeClass('hide')
   store.user = data.user
 }
 const signInFailure = function (error) {
@@ -77,6 +78,7 @@ const signOutSuccess = function (data) {
   $('#so-mstr').addClass('hide')
   $('#char-mstr').addClass('hide')
   $('#show-all-mstr').addClass('hide')
+  $('#show-one-mstr').removeClass('hide')
   // setTimeout(function () {
   //   window.location.replace("https://www.linkedin.com/in/rscottlundgren/")
   // }, 2250)
