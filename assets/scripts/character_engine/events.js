@@ -26,10 +26,10 @@ const onUpdateCharacter = function (event) {
 
 const onDeleteCharacter = function (event) {
   event.preventDefault()
-  const userInput = getFormFields(event.target)
+  const userInput = $(event.target).closest('.card').data('id')
   console.log(userInput)
   charEngAPI.deleteCharacter(userInput)
-    .then(charEngUI.deleteCharacterSuccess)
+    .then(() => onShowAll(event))
     .catch(charEngUI.deleteCharacterFailure)
 }
 
