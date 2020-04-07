@@ -16,7 +16,7 @@
   <script src="https://kit.fontawesome.com/559761ace5.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="bg-mstr" class="bg-000">
+<body id="bg-mstr" class="bg-001">
 
   <!-- NAVIGATION BAR --------------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000">
@@ -40,6 +40,15 @@
           <!-- DISABLED: Link directing user to a video tour of the service --->
           <li id="tour" class="nav-item">
             <a class="nav-link disabled" href="#">Take A Tour!</a>
+          </li>
+
+
+          <li id="about-mstr" class="nav-item">
+            <button id="home-lp" class="navbar-button btn btn-outline-light mx-2">Home</button>
+          </li>
+
+          <li id="reg-mstr" class="nav-item">
+            <button id="about-lp" class="navbar-button btn btn-outline-light mx-2">About</button>
           </li>
 
           <!-- ACTIVE: Registration/Sign-Up Button: --------------------------->
@@ -102,19 +111,41 @@
     <div id="blurb-form-row" class="row">
       <!-- Opening Blurb - NEEDS WORK! ------------------------------------>
       <article class="col-sm-8">
-        <h1 class="p-3">Everything you need to fire Magic Missile at the darkness -
+        <!-- <h1 class="p-3">Everything you need to fire Magic Missile at the darkness -
           right at your fingertips...</h1>
-        <h6 class="p-3">It's hard to be a Dungeon Master nowadays - there's so much to
-          keep track of. Initiative rolls, who failed their "Will" save,
-          who's stabbing whom with what under the cover of darkness...and
-          why, DEAR GOD WHY, won't your players just follow the nicely laid
-          adventure that you spent weeks preparing for and now you're in a
-          rush to come up with an alternative adventure from the shreds that
-          they left you all because they thought they saw something shiny
-          and now you have to look like everything's under control and you
-          planned this all along... *breathe*</h6>
-        <h6 class="p-3">It's not just hard for the DM though - it's hard for the
-          PC's too. There's this incredible world that you've been
+        <h2 class="p-3">Critical Index is here to change all of that...</h2>
+        <h3 class="p-3">Let us show you how...</h3> -->
+      </article>
+      <section id="about" data-spy="scroll" data-target="#about" data-offset="0" class="m-5 p-5" style="background-color: #000000BB;">
+        <p class="span-head">What is "Critical Index"?</p>
+        <p class="span-body">"Critical Index" is a RPG/Tabletop SaaS that
+          allows Player Characters (PCs) & Dungeon Masters (DMs) to remotely
+          run a campaign with only a web-conference client and the software.
+          Alternately, if the campaign is completely housed within Critical
+          Index, both DMs & PCs would be able to participate in the game
+          without need of a hard cover rule book and copious notes. Within
+          Critical Index, DMs would have access to all the rules and
+          references necessary to build out a full campaign, from large scope
+          cosmology/mythos to individual NPCs and adventures (including
+          "dungeon" mapping). PCs will be able to create characters with as
+          much feel as they would normally have if they were building a
+          character from any player handbook.</p>
+        <p></p>
+        <p class="span-head">That's cool, but... </p>
+        <p class="span-body">Let us break it down for you.</p>
+        <p></p>
+        <p class="span-body">It's hard to be a Dungeon Master nowadays -
+          there's so much to keep track of. Initiative rolls, who failed their
+          "will" save, who's stabbing whom with what under the cover of
+          darkness...and why, DEAR GOD WHY, won't your players just follow the
+          nicely laid adventure that you spent weeks preparing for and now
+          you're in a rush to come up with an alternative adventure from the
+          shreds that they left you all because they thought they saw
+          something shiny and now you have to look like everything's under
+          control and you planned this all along... *breathe*</p>
+        <p></p>
+        <p class="span-body">It's not just hard for the DM though - it's hard
+          for the PC's too. There's this incredible world that you've been
           introduced to with Gods and monsters and more things to kill
           than you could shake a stick at. There's damsels to save, gold to
           amass, wrongs to make right (or make worse if you're Chaotic Evil) -
@@ -124,10 +155,32 @@
           you're attacking, and oh, fudge, did the Cleric REALLY just run
           out of cure spells? Your tank is DYING OVER HERE! HELLO?!?!...
           (and all of the other things that help you get those
-          beloved experience points at the end of a campaign.)</h6>
-        <h2 class="p-3">Critical Index is here to change all of that...</h2>
-        <h3 class="p-3">Let us show you how...</h3>
-      </article>
+          beloved experience points at the end of a campaign.)</p>
+        <p></p>
+        <p class="span-head">Alright, I get it - but why now?</p>
+        <p class="span-body">Over the past few months, life has changed
+          drastically. As a result of the COVID-19 pandemic, life has gone
+          remote - we're no longer face-to-face; we're screen-to-screen. All
+          gatherings beyond a normal size have been discouraged. "Shelter in
+          place" and "Quarantine" have become phrases du jour. If we're not
+          able to meet in person, how are we to play? It can be done but it
+          isn't easy. By developing "Critical Index" we are affording RPG
+          gamers and other tabletop enthusiasts the opportunity to play from
+          the comfort of their homes without sacrificing the "feel", the
+          "imagination", the "je ne sais quoi" that keeps PCs and DMs coming
+          back adventure after adventure, campaign after campaign.</p>
+        <p></p>
+        <p class="span-head">OK, I'm on board! How do I use v1?</p>
+        <p class="span-body">If you're new to RPGs this is a great place to
+          start. At this point you can only enter basic character data which
+          will then generate your character for you. You have the ability to
+          set your own character stats (class, race, level, etc.), update the
+          characters you have created, view them either as a group or solo,
+          and delete any characters that you may no longer want but there
+          is no further functionality at this time. If you're not new to RPGs
+          we welcome your feedback (<a href="mailto:critical.index.feedback@gmail.com?Subject=Critical%20Index%20Feedback" target="_top">critical.index.feedback@gmail.com</a>)!</p>
+      </section>
+
       <!-- Registration Form ---------------------------------------------->
       <section id="su-sect" class="col-sm-4 hide">
         <form id="sign-up" class="card bg-transparent">
@@ -185,9 +238,8 @@
               </div>
             </div>
           </div>
-    </div>
-    </form>
-    </section>
+        </form>
+      </section>
     </div>
     <section id="char-mstr" class="row justify-content-space-evenly hide">
       <div class="col-sm-4 mx-6">
@@ -334,6 +386,8 @@
           </form>
         </section>
       </div>
+
+
       <div class="col-sm-4 mx-6">
         <section class="my-3" style="background-color: #000000CC;">
           <form class="card bg-transparent">
@@ -349,26 +403,19 @@
       </div>
 
 
-      <!-- <form id="update-character" class="border">
+      <form id="update-character" class="border">
         <fieldset>
           <legend>Update Character!</legend>
           <div type="text" name="character[id]" placeholder="Character ID">
-          <input type="text" name="character[char_name]" placeholder="Name">
-          <input type="text" name="character[char_alignment]" placeholder="Alignment">
-          <input type="text" name="character[char_deity]" placeholder="Deity">
-          <input type="text" name="character[char_gender]" placeholder="Gender">
-          <input type="text" name="character[char_languages]" placeholder="Languages">
-          <input type="submit" value="Update Your Character!">
+            <input type="text" name="character[char_name]" placeholder="Name">
+            <input type="text" name="character[char_alignment]" placeholder="Alignment">
+            <input type="text" name="character[char_deity]" placeholder="Deity">
+            <input type="text" name="character[char_gender]" placeholder="Gender">
+            <input type="text" name="character[char_languages]" placeholder="Languages">
+            <input type="submit" value="Update Your Character!">
         </fieldset>
       </form>
 
-      <form id="delete-character" class="border">
-        <fieldset>
-          <legend>Delete Character!</legend>
-          <input type="text" name="character[id]" placeholder="Character ID">
-          <input type="submit" value="Delete Your Character!">
-        </fieldset>
-      </form> -->
     </section>
   </main>
 </body>
