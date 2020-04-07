@@ -1,20 +1,25 @@
 'use strict'
 
 const store = require('../store')
+const showHomePage = require('../templates/home-page.handlebars')
+const regForm = require('../templates/show-registration.handlebars')
+const siForm = require('../templates/show-sign-in.handlebars')
 
 const onDropDownRegistration = function (event) {
-  $('#su-sect').removeClass('hide')
-  $('#si-sect').addClass('hide')
+  $('#blurb-form-row').empty()
+  $('#blurb-form-row').append(showHomePage)
+  $('#blurb-form-row').append(regForm)
   $('#sign-up').trigger('reset')
 }
 const onDropDownSignIn = function (event) {
-  $('#si-sect').removeClass('hide')
-  $('#su-sect').addClass('hide')
+  $('#blurb-form-row').empty()
+  $('#blurb-form-row').append(showHomePage)
+  $('#blurb-form-row').append(siForm)
   $('#sign-in').trigger('reset')
 }
 
 // Sign-Up User Interface
-const signUpSuccess = function (data) {
+const signUpSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Registration Successful.')
   $('#su-sect').trigger('reset')
   $('#su-sect').addClass('hide')
@@ -25,7 +30,7 @@ const signUpFailure = function (error) {
 }
 
 // Sign-In User Interface
-const signInSuccess = function (data) {
+const signInSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Authentication Successful. Welcome, Professor.')
   $('#si-sect').addClass('hide')
   $('#si-mstr').addClass('hide')
@@ -39,7 +44,10 @@ const signInSuccess = function (data) {
   $('#char-mstr').removeClass('hide')
   $('#show-all-mstr').removeClass('hide')
   $('#show-one-mstr').removeClass('hide')
-  store.user = data.user
+  $('#about-mstr').addClass('hide')
+  $('#create-mstr').removeClass('hide')
+  $('#update-mstr').removeClass('hide')
+  store.user = responseFromAPI.user
 }
 const signInFailure = function (error) {
   $('#console-line-one').text('Authentication unsuccessful. Please try again.')
@@ -50,13 +58,19 @@ const signInFailure = function (error) {
 const onChangePasswordReveal = function (event) {
   $('#delta-pw-form').removeClass('hide')
   $('#delta-pw').addClass('hide')
+  $('#so-mstr').addClass('hide')
+  $('#show-all-mstr').addClass('hide')
+  $('#show-one-mstr').addClass('hide')
 }
-const changePasswordSuccess = function (data) {
+const changePasswordSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Credential successfully updated.')
   $('#old-pw').val('')
   $('#new-pw').val('')
   $('#delta-pw-form').addClass('hide')
   $('#delta-pw').removeClass('hide')
+  $('#so-mstr').removeClass('hide')
+  $('#show-all-mstr').removeClass('hide')
+  $('#show-one-mstr').removeClass('hide')
 }
 const changePasswordFailure = function (error) {
   $('#console-line-one').text('Credential update unsuccessful. Please try again.')
@@ -65,7 +79,7 @@ const changePasswordFailure = function (error) {
 }
 
 // Sign-Out User Interface
-const signOutSuccess = function (data) {
+const signOutSuccess = function (responseFromAPI) {
   $('#console-line-one').text('--- Connection terminated. ---')
   $('#si-mstr').removeClass('hide')
   $('#reg-mstr').removeClass('hide')
@@ -79,6 +93,12 @@ const signOutSuccess = function (data) {
   $('#char-mstr').addClass('hide')
   $('#show-all-mstr').addClass('hide')
   $('#show-one-mstr').removeClass('hide')
+  $('#about-mstr').removeClass('hide')
+  $('#so-mstr').addClass('hide')
+  $('#show-all-mstr').addClass('hide')
+  $('#show-one-mstr').addClass('hide')
+  $('#create-mstr').addClass('hide')
+  $('#update-mstr').addClass('hide')
   // setTimeout(function () {
   //   window.location.replace("https://www.linkedin.com/in/rscottlundgren/")
   // }, 2250)
