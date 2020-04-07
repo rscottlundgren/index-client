@@ -2,12 +2,24 @@
 
 body,
 html {
-  color: white;
+  color: #fff;
   height: 100%;
+}
+
+hr {
+  border-top: 1px dashed #fff;
 }
 
 .bg-000 {
   background-image: url('/public/img/background_000.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.bg-001 {
+  background-image: url('/public/img/background_001.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,10 +34,27 @@ html {
   height: 100%;
 }
 
-hr {
-  border-top: 1px dashed white;
-}
-
 .hide {
   display: none;
+}
+
+.span-body {
+  font-size: 21px;
+}
+
+.span-head {
+  font-size: 42px;
+}
+
+#about {
+  max-height: 760px;
+  max-width: 900px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+#blurb-form-row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
