@@ -1,0 +1,23 @@
+<!-- Add Data-ID To The Card For Iteration Purposes, Allows Information ------->
+<!-- Population, & Reference As A Event Item ---------------------------------->
+<div class="card bg-transparent" data-id="{{character.id}}">
+  <div class="card-header" id="heading-{{character.id}}">
+    <h2 class="mb-0">
+      <button id="del-btn" class="btn btn-outline-light" type="submit">Delete</button>
+      <button class="btn text-white bg-transparent" type="button" data-toggle="collapse" data-target="#collapse-{{character.id}}" aria-expanded="true" aria-controls="collapse-{{character.id}}">
+        ID: {{character.id}} | Name: {{character.char_name}} | Class: {{character.char_class}} | Level: {{character.char_level}}
+      </button>
+    </h2>
+  </div>
+  <div id="collapse-{{character.id}}" class="collapse" aria-labelledby="heading-{{character.id}}" data-parent="#char-list-accord">
+    <div class="card-body row">
+      <div class="card-text col-sm-6">Race: {{character.char_race}}</div>
+      <div class="card-text col-sm-6">Alignment: {{character.char_alignment}}</div>
+      <div class="card-text col-sm-6">Gender: {{character.char_gender}}</div>
+      <div class="card-text col-sm-6">Deity: {{character.char_deity}}</div>
+      <div class="card-text col-sm-6">Campaign: {{character.char_campaign}}</div>
+      <div class="card-text col-sm-6">XP: {{character.char_xp}}</div>
+      <div class="card-text col-sm-12">Languages: {{character.char_languages}}</div>
+    </div>
+  </div>
+</div>
