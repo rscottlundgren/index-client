@@ -3,7 +3,7 @@
 const config = require('../config')
 const store = require('../store')
 
-// Sign-Up API Ajax Call
+// Create Character API Ajax Call --------------------------------------------->
 const createCharacter = function (userInput) {
   return $.ajax({
     url: config.apiUrl + '/characters',
@@ -16,6 +16,7 @@ const createCharacter = function (userInput) {
   console.log(userInput)
 }
 
+// Update Character API Ajax Call --------------------------------------------->
 const updateCharacter = function (userInput) {
   return $.ajax({
     url: config.apiUrl + '/characters/' + userInput.character.id,
@@ -28,6 +29,7 @@ const updateCharacter = function (userInput) {
   console.log(userInput)
 }
 
+// Delete Character API Ajax Call --------------------------------------------->
 const deleteCharacter = function (userInput) {
   return $.ajax({
     url: config.apiUrl + '/characters/' + userInput,
@@ -40,6 +42,7 @@ const deleteCharacter = function (userInput) {
   console.log(userInput)
 }
 
+// Show All Characters API Ajax Call ------------------------------------------>
 const showAll = function () {
   return $.ajax({
     url: config.apiUrl + '/characters',
@@ -50,6 +53,7 @@ const showAll = function () {
   })
 }
 
+// Show One Character API Ajax Call ------------------------------------------->
 const showOne = function (userInput) {
   return $.ajax({
     url: config.apiUrl + '/characters/' + userInput.character.id,
