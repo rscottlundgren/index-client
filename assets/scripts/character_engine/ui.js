@@ -1,10 +1,51 @@
 'use strict'
 
 const store = require('../store')
-const showAllCharactersTemplate = require('../templates/accordion-character.handlebars')
-const showOneCharacterTemplate = require('../templates/show-one-character.handlebars')
+const showAllTemplate = require('../templates/show-all-characters.handlebars')
+const showOneTemplate = require('../templates/show-one-character.handlebars')
+const showAboutPage = require('../templates/about-page.handlebars')
+const showHomePage = require('../templates/home-page.handlebars')
+const showCharacterGenerator = require('../templates/create-character.handlebars')
+const showUpdateCharacter = require('../templates/update-character.handlebars')
 
-// Sign-Up User Interface
+const onShowAboutPage = function (event) {
+  $('#reg-dd').addClass('hide')
+  $('#si-dd').addClass('hide')
+  $('#home-mstr').removeClass('hide')
+  $('#about-mstr').addClass('hide')
+  $('#bg-mstr').removeClass('bg-000')
+  $('#bg-mstr').addClass('bg-001')
+  $('#blurb-form-row').empty()
+  $('#blurb-form-row').addClass('about-page-text')
+  $('#blurb-form-row').append(showAboutPage)
+}
+
+const onShowHomePage = function (event) {
+  $('#reg-dd').removeClass('hide')
+  $('#si-dd').removeClass('hide')
+  $('#home-mstr').addClass('hide')
+  $('#about-mstr').removeClass('hide')
+  $('#bg-mstr').removeClass('bg-001')
+  $('#bg-mstr').addClass('bg-000')
+  $('#blurb-form-row').empty()
+  $('#blurb-form-row').removeClass('about-page-text')
+  $('#blurb-form-row').append(showHomePage)
+}
+
+const onShowCharacterGenerator = function (event) {
+  $('#generate-update').empty()
+  $('#generate-update').append(showCharacterGenerator)
+  $('#create-mstr').addClass('hide')
+  $('#update-mstr').removeClass('hide')
+}
+
+const onShowUpdateCharacter = function (event) {
+  $('#generate-update').empty()
+  $('#generate-update').append(showUpdateCharacter)
+  $('#create-mstr').removeClass('hide')
+  $('#update-mstr').addClass('hide')
+}
+
 const createCharacterSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Creation Successful.')
   console.log(responseFromAPI)
@@ -50,9 +91,9 @@ const showAllCharactersSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Show All Successful.')
   console.log(responseFromAPI)
   const characterList = responseFromAPI.characters
-  const showCharacterHTML = showAllCharactersTemplate({characters: characterList})
+  const showHTML = showAllTemplate({characters: characterList})
   $('#char-list-accord').empty()
-  $('#char-list-accord').append(showCharacterHTML)
+  $('#char-list-accord').append(showHTML)
 }
 const showAllCharactersFailure = function (error) {
   $('#console-line-one').text('Show All unsuccessful.')
@@ -60,7 +101,7 @@ const showAllCharactersFailure = function (error) {
   console.log(error)
 }
 
-const onShowOneCharacter = function (click) {
+const onShowOneCharacter = function (event) {
   $('#show-one-form').removeClass('hide')
   $('#show-one-mstr').addClass('hide')
 }
@@ -68,9 +109,9 @@ const showOneSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Show One Successful.')
   console.log(responseFromAPI)
   const characterSolo = responseFromAPI.character
-  const showCharacterHTML = showOneCharacterTemplate({character: characterSolo})
+  const showHTML = showOneTemplate({character: characterSolo})
   $('#char-list-accord').empty()
-  $('#char-list-accord').append(showCharacterHTML)
+  $('#char-list-accord').append(showHTML)
   $('#show-one-form').addClass('hide')
   $('#show-one-mstr').removeClass('hide')
 }
@@ -81,6 +122,10 @@ const showOneFailure = function (error) {
 }
 
 module.exports = {
+  onShowAboutPage,
+  onShowHomePage,
+  onShowUpdateCharacter,
+  onShowCharacterGenerator,
   createCharacterSuccess,
   createCharacterFailure,
   updateCharacterSuccess,
