@@ -10,6 +10,12 @@ hr {
   border-top: 1px dashed #fff;
 }
 
+.about-page-text {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .bg-000 {
   background-image: url('/public/img/background_000.jpg');
   background-position: center;
@@ -38,6 +44,14 @@ hr {
   display: none;
 }
 
+.ci-name {
+  font-size: 185px;
+}
+
+.ci-slogan {
+  font-size: 40px;
+}
+
 .span-body {
   font-size: 21px;
 }
@@ -51,10 +65,4 @@ hr {
   max-width: 900px;
   overflow-y: scroll;
   position: relative;
-}
-
-#blurb-form-row {
-  align-items: center;
-  display: flex;
-  justify-content: center;
 }
