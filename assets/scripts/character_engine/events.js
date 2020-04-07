@@ -4,7 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const charEngAPI = require('./api')
 const charEngUI = require('./ui')
 
-// Sign-Up Event
+// Create Character Event ----------------------------------------------------->
 const onCreateCharacter = function (event) {
   event.preventDefault()
   const userInput = getFormFields(event.target)
@@ -14,7 +14,7 @@ const onCreateCharacter = function (event) {
     .catch(charEngUI.createCharacterFailure)
 }
 
-// Sign-Up Event
+// Update Character Event ----------------------------------------------------->
 const onUpdateCharacter = function (event) {
   event.preventDefault()
   const userInput = getFormFields(event.target)
@@ -24,6 +24,7 @@ const onUpdateCharacter = function (event) {
     .catch(charEngUI.updateCharacterFailure)
 }
 
+// Delete Character Event ----------------------------------------------------->
 const onDeleteCharacter = function (event) {
   event.preventDefault()
   const userInput = $(event.target).closest('.card').data('id')
@@ -33,6 +34,7 @@ const onDeleteCharacter = function (event) {
     .catch(charEngUI.deleteCharacterFailure)
 }
 
+// Show All Characters Event -------------------------------------------------->
 const onShowAll = function (event) {
   event.preventDefault()
   charEngAPI.showAll()
@@ -40,6 +42,7 @@ const onShowAll = function (event) {
     .catch(charEngUI.showAllCharactersFailure)
 }
 
+// Show One Character Event --------------------------------------------------->
 const onShowOne = function (event) {
   event.preventDefault()
   const userInput = getFormFields(event.target)
