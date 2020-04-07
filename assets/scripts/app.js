@@ -6,6 +6,7 @@
 const authEvents = require('./auth/events')
 const charEvents = require('./character_engine/events.js')
 const authUI = require('./auth/ui')
+const charUI = require('./character_engine/ui.js')
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
@@ -17,10 +18,11 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#create-character').on('submit', charEvents.onCreateCharacter)
   $('#update-character').on('submit', charEvents.onUpdateCharacter)
-  $('#delete-character').on('submit', charEvents.onDeleteCharacter)
+  $('#char-list-accord').on('click', '#del-btn',charEvents.onDeleteCharacter)
   $('#show-all').on('click', charEvents.onShowAll)
-  $('#single-character').on('submit', charEvents.onShowOne)
+  $('#show-one-form').on('submit', charEvents.onShowOne)
   $('#reg-dd').on('click', authUI.onDropDownRegistration)
   $('#si-dd').on('click', authUI.onDropDownSignIn)
   $('#delta-pw').on('click', authUI.onChangePasswordReveal)
+  $("#show-one").on('click', charUI.onShowOneCharacter)
 })
