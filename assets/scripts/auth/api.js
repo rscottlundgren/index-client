@@ -3,38 +3,39 @@
 const config = require('../config')
 const store = require('../store')
 
-// Sign-Up API Ajax Call
-const signUp = function (data) {
+// Sign-Up API Ajax Call ------------------------------------------------------>
+const signUp = function (userInput) {
+  console.log(userInput)
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
-    data
+    data: userInput
   })
-  console.log(data)
 }
 
-// Sign-In API Ajax Call
-const signIn = function (data) {
+// Sign-In API Ajax Call ------------------------------------------------------>
+const signIn = function (userInput) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
-    data
+    data: userInput
   })
-  console.log(data)
+  console.log(userInput)
 }
 
-// Change Password API Ajax Call
-const changePassword = function (data) {
+// Change Password API Ajax Call ---------------------------------------------->
+const changePassword = function (userInput) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: userInput
   })
 }
 
+// Sign Out API Ajax Call ----------------------------------------------------->
 const signOut = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
