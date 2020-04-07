@@ -2,6 +2,7 @@
 
 const store = require('../store')
 const showAllCharactersTemplate = require('../templates/accordion-character.handlebars')
+const showOneCharacterTemplate = require('../templates/show-one-character.handlebars')
 
 // Sign-Up User Interface
 const createCharacterSuccess = function (responseFromAPI) {
@@ -38,8 +39,6 @@ const updateCharacterFailure = function (error) {
 const deleteCharacterSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Delete Successful.')
   console.log(responseFromAPI)
-  // $('#sign-up').trigger('reset')
-  // $('#sign-up').addClass('hide')
 }
 const deleteCharacterFailure = function (error) {
   $('#console-line-one').text('Delete unsuccessful.')
@@ -61,11 +60,19 @@ const showAllCharactersFailure = function (error) {
   console.log(error)
 }
 
+const onShowOneCharacter = function (click) {
+  $('#show-one-form').removeClass('hide')
+  $('#show-one-mstr').addClass('hide')
+}
 const showOneSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Show One Successful.')
   console.log(responseFromAPI)
-  // $('#sign-up').trigger('reset')
-  // $('#sign-up').addClass('hide')
+  const characterSolo = responseFromAPI.character
+  const showCharacterHTML = showOneCharacterTemplate({character: characterSolo})
+  $('#char-list-accord').empty()
+  $('#char-list-accord').append(showCharacterHTML)
+  $('#show-one-form').addClass('hide')
+  $('#show-one-mstr').removeClass('hide')
 }
 const showOneFailure = function (error) {
   $('#console-line-one').text('Show One unsuccessful.')
@@ -82,6 +89,7 @@ module.exports = {
   deleteCharacterFailure,
   showAllCharactersSuccess,
   showAllCharactersFailure,
+  onShowOneCharacter,
   showOneSuccess,
   showOneFailure
 }
