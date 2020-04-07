@@ -30,7 +30,7 @@ const updateCharacter = function (userInput) {
 
 const deleteCharacter = function (userInput) {
   return $.ajax({
-    url: config.apiUrl + '/characters/' + userInput.character.id,
+    url: config.apiUrl + '/characters/' + userInput,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
