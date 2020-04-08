@@ -31,7 +31,7 @@ const signUpFailure = function (error) {
 
 // Sign-In User Interface
 const signInSuccess = function (responseFromAPI) {
-  $('#console-line-one').text('Authentication Successful. Welcome, Professor.')
+  $('#console-line-one').text('Authentication Successful.')
   $('#si-sect').addClass('hide')
   $('#si-mstr').addClass('hide')
   $('#reg-mstr').addClass('hide')
