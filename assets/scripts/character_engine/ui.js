@@ -59,6 +59,7 @@ const createCharacterSuccess = function (responseFromAPI) {
   $('#char-xp-new-gen').text(responseFromAPI.character.char_xp)
   $('#char-campaign-new-gen').text(responseFromAPI.character.char_campaign)
   $('#char-languages-new-gen').text(responseFromAPI.character.char_languages)
+  $('#create-character').trigger('reset')
 }
 const createCharacterFailure = function (error) {
   $('#console-line-one').text('Creation unsuccessful.')
