@@ -44,13 +44,14 @@ The biggest challenge for me at this stage was probably scoping coupled with con
     * [ ] Text
 
 ## Wireframes
-- ![Project 2 - Character Sheet (Front)](001 - CS - pg1 copy.jpeg)
-- ![Project 2 - Character Sheet (Back)](002 - CS - pg2 copy.jpeg)
-- ![Project 2 - CI - Homescreen](003 - Critical Index - Log-In Page copy.jpeg)
-- ![Project 2 - CI - Step 1](004 - Critical Index - Step 01 copy.jpeg)
-- ![Project 2 - CI - Step 2](005 - Critical Index - Step 02 copy.jpeg)
-- ![Project 2 - CI - Step 3](006 - Critical Index - Step 03 copy.jpeg)
-- ![Project 2 - CI - Step 4](007 - Critical Index - Step 04 copy.jpeg)
+- [Project 2 - ERD Synopsis](https://i.imgur.com/OrPCRGM.jpg)
+- [Project 2 - Character Sheet (Front)](https://i.imgur.com/1BIHkxO.jpg)
+- [Project 2 - Character Sheet (Back)](https://i.imgur.com/lHVQwAn.jpg)
+- [Project 2 - CI - Homescreen](https://i.imgur.com/dSXoy49.jpg)
+- [Project 2 - CI - Step 1](https://i.imgur.com/gP5lAPM.jpg)
+- [Project 2 - CI - Step 2](https://i.imgur.com/ENzszmJ.jpg)
+- [Project 2 - CI - Step 3](https://i.imgur.com/lYgrNXn.jpg)
+- [Project 2 - CI - Step 4](https://i.imgur.com/R2YMr2i.jpg)
 
 ## User Stories
 - As an unregistered user, I would like to be able to sign-up with email, password, and password confirmation.
