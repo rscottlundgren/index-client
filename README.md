@@ -44,13 +44,13 @@ The biggest challenge for me at this stage was probably scoping coupled with con
     * [ ] Text
 
 ## Wireframes
-- [Project 2 - Character Sheet (Front)](001 - CS - pg1 copy.jpeg)
-- [Project 2 - Character Sheet (Back)](002 - CS - pg2 copy.jpeg)
-- [Project 2 - CI - Homescreen](003 - Critical Index - Log-In Page copy.jpeg)
-- [Project 2 - CI - Step 1](004 - Critical Index - Step 01 copy.jpeg)
-- [Project 2 - CI - Step 2](005 - Critical Index - Step 02 copy.jpeg)
-- [Project 2 - CI - Step 3](006 - Critical Index - Step 03 copy.jpeg)
-- [Project 2 - CI - Step 4](007 - Critical Index - Step 04 copy.jpeg)
+- ![Project 2 - Character Sheet (Front)](001 - CS - pg1 copy.jpeg)
+- ![Project 2 - Character Sheet (Back)](002 - CS - pg2 copy.jpeg)
+- ![Project 2 - CI - Homescreen](003 - Critical Index - Log-In Page copy.jpeg)
+- ![Project 2 - CI - Step 1](004 - Critical Index - Step 01 copy.jpeg)
+- ![Project 2 - CI - Step 2](005 - Critical Index - Step 02 copy.jpeg)
+- ![Project 2 - CI - Step 3](006 - Critical Index - Step 03 copy.jpeg)
+- ![Project 2 - CI - Step 4](007 - Critical Index - Step 04 copy.jpeg)
 
 ## User Stories
 - As an unregistered user, I would like to be able to sign-up with email, password, and password confirmation.
