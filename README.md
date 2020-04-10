@@ -7,12 +7,12 @@
 Full-Stack:   | Link To:    | URL:
 --------------|-------------|---------------------------------------------------
 Front-End     | Website     | https://rscottlundgren.github.io/index-client/
-              |-------------|---------------------------------------------------
-              | GitHub Repo | https://github.com/rscottlundgren/index-client
+--------------|-------------|---------------------------------------------------
+Front-End     | GitHub Repo | https://github.com/rscottlundgren/index-client
 --------------|-------------|---------------------------------------------------
 Back-End      | Website     | https://critical-index.herokuapp.com/
-              |-------------|---------------------------------------------------
-              | GitHub Repo | https://github.com/rscottlundgren/index-api
+--------------|-------------|---------------------------------------------------
+Back-End      | GitHub Repo | https://github.com/rscottlundgren/index-api
 
 ## List of Technologies Used
 - Browser template
