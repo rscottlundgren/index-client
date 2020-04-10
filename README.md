@@ -3,8 +3,16 @@
 ## Description
 "Critical Index" is a SaaS Whose Main Purpose is to Serve as an Assistive Compendium in Both Running and Participating in RPG/Tabletop Gaming. This is the Front End Development/Production Version of Project 2 for General Assembly's Software Engineering Immersive Program
 
-## Website
-[Link to the live URL](https://rscottlundgren.github.io/index-client/)
+## Relevant Links
+Full-Stack:   | Link To:    | URL:
+--------------|-------------|---------------------------------------------------
+Front-End     | Website     | https://rscottlundgren.github.io/index-client/
+              |-------------|---------------------------------------------------
+              | GitHub Repo | https://github.com/rscottlundgren/index-client
+--------------|-------------|---------------------------------------------------
+Back-End      | Website     | https://critical-index.herokuapp.com/
+              |-------------|---------------------------------------------------
+              | GitHub Repo | https://github.com/rscottlundgren/index-api
 
 ## List of Technologies Used
 - Browser template
@@ -27,21 +35,29 @@ Once wireframed, I began the process of building out the backend API (those expe
 
 I reached out for guidance on how to move forward with building out the API and while I waited for a response, I began making all of the aesthetic changes that I wanted so the app would come off as more professional and presentation ready. This meant reformatting/rebuilding the forms, redesigning the buttons, creating inline forms, and a host of other changes. At this stage, what helped the most was the documentation provided by Bootstrap. In the first project I wanted to do what I wanted to do and spent a good amount of time fighting with Bootstrap and ignoring the documentation. This time, I read what seemed relevant in the documentation and it made all the difference - this time it was much less of a fight and more of a coaxing experience.
 
-[TALK ABOUT FINAL LAP/FINISH LINE OF PROJECT]
+Post-presentation during resubmission there were no major hiccups. Considerations for UI improvement include the use of modals (which seem to be extremely popular) and expanding my repertoire of jQuery click events. This probably speaks to who I am as a person when the pressure's on: I'd rather trust what I know than experiment with what I don't (understandable when you only have four days to complete a project).
+
+Overall, I hope that everyone enjoys this project and I look forward on further developing it into a version 2 and beyond.
 
 ## Challenges
 The biggest challenge for me at this stage was probably scoping coupled with concern over making sure that my API was utilizing tables in a manner that made sense. I'll cover the latter more in the README for that repo. With the former, as in the first project, I dreamed rather big. This became a concept that will take me far beyond the three-month attendance in this course and it's a project that, while it could be done alone, would also make more sense to do in collaboration with others. With that in mind, I had to figure out what part of this project would be the smallest, most useful piece to code as a submission. It ultimately came down to the smallest piece I could think of, which is the character generator, but even that was a mountain of a task, so breaking that down into bite-sized bits was a challenge. Ultimately, as a result of this exercise, I realized the importance of scoping to the smallest milestones that you can come up with and planning those out in a way that makes the most sense from a timeline perspective (with only the information that I have at the time).
 
-## Unsolved Problems [LIST UNSOLVED PROBLEMS HERE]
-* [ ] Text
+## Unsolved Problems
+* [ ] HTML still displays linter errors and there are a couple other in other locations which need to be addressed.
+* [ ] There are 3 warning linter errors that are bugging me (harharhar) which I would like to resolve.
+* [ ] Generally, the next step/unsolved problem would be planning out the next table that would join the present ones in a way that makes sense for both present and future use.
 
 ## Future Goals [LIST OF FUTURE GOALS HERE]
-* [ ] __Text:__ Text
-* [ ] __Text:__ Text
-    * [ ] Text
+* [ ] __Map Feature:__ Ability for DMs to map out their adventures for easier combat and adventure visualization.
+* [ ] __DM/PC Campaign Link:__ Ability for DMs to link players to a campaign.
+* [ ] __Campaign Library:__ Ability for DMs to post and PCs to access a library of materials relevant to the world/campaign they are playing within.
+* [ ] __PC Journal:__ Ability for players to journal about each adventure experience in their PCs profile for better adventure/campaign cohesion.
+* [ ] __DM/PC Read-Only Access:__ PCs should have read-only access to the Library and to select DM notes for better world building/imagination of the world. DMs should have edit access to the players character sheets for updating throughout each adventure and read-only access to the PCs journal (dependent upon player's choice).
+* [ ] __TBD:__ TBD
+    * [ ] TBD
 
 * [ ] __Easter Eggs:__ Build in 'Easter Egg' features like the following:
-    * [ ] Text
+    * [ ] TBD
 
 ## Wireframes
 - [Project 2 - ERD Synopsis](https://i.imgur.com/OrPCRGM.jpg)
