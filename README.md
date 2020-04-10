@@ -47,7 +47,7 @@ The biggest challenge for me at this stage was probably scoping coupled with con
 * [ ] There are 3 warning linter errors that are bugging me (harharhar) which I would like to resolve.
 * [ ] Generally, the next step/unsolved problem would be planning out the next table that would join the present ones in a way that makes sense for both present and future use.
 
-## Future Goals [LIST OF FUTURE GOALS HERE]
+## Future Goals
 * [ ] __Map Feature:__ Ability for DMs to map out their adventures for easier combat and adventure visualization.
 * [ ] __DM/PC Campaign Link:__ Ability for DMs to link players to a campaign.
 * [ ] __Campaign Library:__ Ability for DMs to post and PCs to access a library of materials relevant to the world/campaign they are playing within.
