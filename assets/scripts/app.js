@@ -37,6 +37,9 @@ $(() => {
   // Show Change Password Inline Form ----------------------------------------->
   $('#delta-pw').on('click', authUI.onChangePasswordReveal)
 
+
+  $('#delta-pw-return').on('click', authUI.onChangePasswordReturn)
+
   // Character - Events ------------------------------------------------------->
   // Create New Character ----------------------------------------------------->
   $('#generate-update').on('submit', '#create-character', charEvents.onCreateCharacter)
