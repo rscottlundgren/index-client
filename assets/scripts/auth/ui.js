@@ -61,6 +61,19 @@ const onChangePasswordReveal = function (event) {
   $('#so-mstr').addClass('hide')
   $('#show-all-mstr').addClass('hide')
   $('#show-one-mstr').addClass('hide')
+  $('#delta-pw-return-mstr').removeClass('hide')
+  $('#create-mstr').addClass('hide')
+  $('#update-mstr').addClass('hide')
+}
+const onChangePasswordReturn = function (event) {
+  $('#delta-pw-return-mstr').addClass('hide')
+  $('#delta-pw-form').addClass('hide')
+  $('#delta-pw').removeClass('hide')
+  $('#so-mstr').removeClass('hide')
+  $('#show-all-mstr').removeClass('hide')
+  $('#show-one-mstr').removeClass('hide')
+  $('#create-mstr').removeClass('hide')
+  $('#update-mstr').removeClass('hide')
 }
 const changePasswordSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Credential successfully updated.')
@@ -115,6 +128,7 @@ module.exports = {
   signInSuccess,
   signInFailure,
   onChangePasswordReveal,
+  onChangePasswordReturn,
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
