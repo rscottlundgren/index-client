@@ -92,7 +92,7 @@ const signOutSuccess = function (responseFromAPI) {
   $('#so-mstr').addClass('hide')
   $('#char-mstr').addClass('hide')
   $('#show-all-mstr').addClass('hide')
-  $('#show-one-mstr').removeClass('hide')
+  $('#show-one-form').addClass('hide')
   $('#about-mstr').removeClass('hide')
   $('#so-mstr').addClass('hide')
   $('#show-all-mstr').addClass('hide')
