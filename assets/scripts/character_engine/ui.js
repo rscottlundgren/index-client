@@ -115,6 +115,7 @@ const showOneSuccess = function (responseFromAPI) {
   $('#char-list-accord').append(showHTML)
   $('#show-one-form').addClass('hide')
   $('#show-one-mstr').removeClass('hide')
+  $('#show-one-form').trigger('reset')
 }
 const showOneFailure = function (error) {
   $('#console-line-one').text('Show One unsuccessful.')
