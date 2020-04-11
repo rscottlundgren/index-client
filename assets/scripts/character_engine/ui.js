@@ -69,12 +69,12 @@ const createCharacterFailure = function (error) {
 const updateCharacterSuccess = function (responseFromAPI) {
   $('#console-line-one').text('Update Successful.')
   console.log(responseFromAPI)
-  // $('#sign-up').trigger('reset')
+  $('#update-character').trigger('reset')
   // $('#sign-up').addClass('hide')
 }
 const updateCharacterFailure = function (error) {
   $('#console-line-one').text('Update unsuccessful.')
-  // $('#sign-up').trigger('reset')
+  $('#update-character').trigger('reset')
   console.log(error)
 }
 
