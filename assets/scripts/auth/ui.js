@@ -112,6 +112,8 @@ const signOutSuccess = function (responseFromAPI) {
   $('#show-one-mstr').addClass('hide')
   $('#create-mstr').addClass('hide')
   $('#update-mstr').addClass('hide')
+  $('#generate-update').empty()
+  $('#char-list-accord').empty()
   $('#char-name-new-gen').text('')
   $('#char-class-new-gen').text('')
   $('#char-level-new-gen').text('')
