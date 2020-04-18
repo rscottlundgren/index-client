@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Critical Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/559761ace5.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="bg-mstr" class="bg-000">
+
+  <!-- NAVIGATION BAR --------------------------------------------------------->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000">
+
+    <!-- Brand Logo in the Navigation Bar ------------------------------------->
+    <a class="navbar-brand text-white">Critical <span><i class="fas fa-scroll"></i></span> Index</a>
+    <a id="console-line-one" class="navbar-text text-yellow"></a>
+
+    <!-- Button will appear when Navbar senses the screen has shrunk ---------->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- All links moved to the opposite side of the brand -------------------->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+
+      <!-- Span wrapper to move everything to the opposite side of the brand -->
+      <span>
+        <ul class="navbar-nav">
+
+          <!-- DISABLED: Link directing user to a video tour of the service --->
+          <li id="tour" class="nav-item">
+            <a class="nav-link disabled" href="#">Take A Tour!</a>
+          </li>
+
+          <!-- ACTIVE: "Home" Page Button: ------------------------------------>
+          <!-- Redirects Users to the "Home" Page from the "About" Page ------->
+          <li id="home-mstr" class="nav-item hide">
+            <button id="home-lp" class="navbar-button btn btn-outline-light mx-2">Home</button>
+          </li>
+
+          <!-- ACTIVE: "About" Page Button: ----------------------------------->
+          <!-- Redirects Users to the "About" Page from the "Home" Page ------->
+          <li id="about-mstr" class="nav-item">
+            <button id="about-lp" class="navbar-button btn btn-outline-light mx-2">About</button>
+          </li>
+
+          <!-- ACTIVE: Registration/Sign-Up Button: --------------------------->
+          <!-- Opens Registration Drop Down Menu ------------------------------>
+          <li id="reg-mstr" class="nav-item">
+            <button id="reg-dd" class="navbar-button btn btn-outline-light mx-2">Register</button>
+          </li>
+
+          <!-- ACTIVE: Sign-In Button: Opens Sign-In Drop Down Menu ----------->
+          <li id="si-mstr" class="nav-item">
+            <button id="si-dd" class="navbar-button btn btn-outline-light mx-2">Sign-In</button>
+          </li>
+
+          <li id="create-mstr" class="nav-item hide">
+            <button id="show-create-form" class="navbar-button btn btn-outline-light mx-2">Create Character</button>
+          </li>
+
+          <li id="update-mstr" class="nav-item hide">
+            <button id="show-update-form" class="navbar-button btn btn-outline-light mx-2">Update Character</button>
+          </li>
+
+          <li id="show-one-mstr" class="nav-item hide">
+            <button id="show-one" class="navbar-button btn btn-outline-light mx-2">Show One</button>
+          </li>
+
+          <!-- ACTIVE: Show One Button: --------------------------------------->
+          <!-- Opens Show One Character Inline Form --------------------------->
+          <form id="show-one-form" class="form-inline hide">
+            <label class="sr-only" for="show-one-char-id">Character ID</label>
+            <input id="show-one-char-id" class="form-control mx-2" type="text" name="character[id]" placeholder="Character ID">
+            <button type="submit" class="navbar-button btn btn-outline-light mx-2">Show One</button>
+          </form>
+
+          <!-- ACTIVE: Show-All Button: Displays All User Characters In ------->
+          <!-- Accordion File Display ----------------------------------------->
+          <li id="show-all-mstr" class="nav-item hide">
+            <button id="show-all" class="navbar-button btn btn-outline-light mx-2">Show All</button>
+          </li>
+
+          <!-- ACTIVE: Change Password Button: -------------------------------->
+          <!-- Opens Change Password Inline Form ------------------------------>
+          <li id="delta-pw-mstr" class="nav-item hide">
+            <button id="delta-pw" class="navbar-button btn btn-outline-light mx-2">Change Password</button>
+          </li>
+
+          <!-- ACTIVE: Change Password Form ----------------------------------->
+          <form id="delta-pw-form" class="form-inline hide">
+            <label class="sr-only" for="old-pw">Old Password</label>
+            <input id="old-pw" class="form-control mx-2" type="password" name="passwords[old]" placeholder="Old Password">
+            <label class="sr-only" for="new-pw">New Password</label>
+            <input id="new-pw" class="form-control mx-2" type="password" name="passwords[new]" placeholder="New Password">
+            <button class="btn btn-outline-light ml-2" type="submit">Change Password</button>
+          </form>
+
+          <li id="delta-pw-return-mstr" class="nav-item hide">
+            <button id="delta-pw-return" class="navbar-button btn btn-outline-light mx-2">Return</button>
+          </li>
+
+          <!-- ACTIVE: Sign Out Button ---------------------------------------->
+          <li id="so-mstr" class="nav-item hide">
+            <button id="sign-out" class="navbar-button btn btn-outline-light mx-2" type="submit">Sign Out</button>
+          </li>
+
+          <!-- NAVIGATION BAR: Closing Tags ------------------------------------->
+        </ul>
+      </span>
+    </div>
+  </nav>
+
+  <main class="container-fluid">
+    <!-- Main Body: Blurb + Registration Form + Sign-In Form -------------->
+    <div id="blurb-form-row" class="row">
+      <article id="name-slogan" class="col-sm-8">
+        <p class="ci-name p-3">Critical Index</p>
+        <p class="ci-slogan p-3">Everything you need to fire Magic Missile at the darkness -
+          right at your fingertips...</p>
+      </article>
+    </div>
+    <section id="char-mstr" class="row justify-content-space-evenly hide">
+      <div id="generate-update" class="col-sm-4 mx-6">
+        <section id="generate-update-heading" class="my-3" style="background-color: #000000CC;">
+          <form id="create-update" class="card bg-transparent">
+            <div class="container card-body align-center">
+              <h3 class="text-center"><i class="fas fa-dice-d6"></i> Create/Update Character:</h3>
+              <hr>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div class="col-sm-4 mx-6">
+        <section id="char-new-gen" class="my-3" style="background-color: #000000CC;">
+          <form id="char-status" class="card bg-transparent">
+            <div class="container card-body align-center">
+              <h3 class="text-center"><i class="fas fa-dice-d6"></i> PC Generated:</h3>
+              <hr>
+              <div class="form-group row">
+                <label for="char-name-new-gen" class="col-sm-3 col-form-label">Name:</label>
+                <div class="col-sm-9">
+                  <div id="char-name-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-class-new-gen" class="col-sm-3 col-form-label">Class:</label>
+                <div class="col-sm-9">
+                  <div id="char-class-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-level-new-gen" class="col-sm-3 col-form-label">Level:</label>
+                <div class="col-sm-9">
+                  <div id="char-level-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-race-new-gen" class="col-sm-3 col-form-label">Race:</label>
+                <div class="col-sm-9">
+                  <div id="char-race-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-align-new-gen" class="col-sm-3 col-form-label">Alignment:</label>
+                <div class="col-sm-9">
+                  <div id="char-align-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-deity-new-gen" class="col-sm-3 col-form-label">Deity:</label>
+                <div class="col-sm-9">
+                  <div id="char-deity-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-gender-new-gen" class="col-sm-3 col-form-label">Gender:</label>
+                <div class="col-sm-9">
+                  <div id="char-gender-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-xp-new-gen" class="col-sm-3 col-form-label">XP:</label>
+                <div class="col-sm-9">
+                  <div id="char-xp-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-campaign-new-gen" class="col-sm-3 col-form-label">Campaign:</label>
+                <div class="col-sm-9">
+                  <div id="char-campaign-new-gen"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="char-languages-new-gen" class="col-sm-3 col-form-label">Languages:</label>
+                <div class="col-sm-9">
+                  <div id="char-languages-new-gen"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+
+      <div class="col-sm-4 mx-6">
+        <section class="my-3" style="background-color: #000000CC;">
+          <form class="card bg-transparent">
+            <div class="container card-body align-center">
+              <h3 class="text-center"><i class="fas fa-dice-d6"></i> Character Index:</h3>
+              <hr>
+            </div>
+            <div class="accordion" id="char-list-accord">
+              <!-- "Show All Characters" & "Show One Character" Cards Here ------>
+            </div>
+          </form>
+        </section>
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>
